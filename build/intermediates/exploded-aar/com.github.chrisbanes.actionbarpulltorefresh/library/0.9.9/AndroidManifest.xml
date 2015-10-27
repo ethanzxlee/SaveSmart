@@ -1,0 +1,4 @@
+<!-- From: file:/Users/chris/Development/ActionBar-PullToRefresh/library/src/main/AndroidManifest.xml --><manifest package="uk.co.senab.actionbarpulltorefresh.library" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19"/>
+    <application/>
+</manifest>

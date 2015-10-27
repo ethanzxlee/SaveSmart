@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- GLOBAL -->
+    <string name="app_name">saveSmart</string>
+    <string name="action_settings">设置</string>
+    <string name="custom_font_path_1">fonts/archer_semibold_pro.otf</string>
+    <string name="action_ok">确定</string>
+    <string name="action_cancel">取消</string>
+
+    <!-- Activity Title -->
+    <string name="title_activity_main">saveSmart</string>
+    <string name="title_activity_first_time_use">欢迎</string>
+    <string name="title_activity_user_sign_up">注册</string>
+    <string name="title_activity_user_login">登录</string>
+
+    <!-- Popup Title -->
+    <string name="title_popup_forget_password">忘记密码？</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Error messages -->
+    <string name="error_email_not_found">This email hasn\'t been registered on saveSmart</string>
+    <string name="error_email_invalid">Invalid email address</string>
+    <string name="error_email_empty">Please enter your email address</string>
+    <string name="error_email_taken">This email was already registered on saveSmart</string>
+    <string name="error_field_empty">请输入以上所需资料</string>
+    <string name="error_invalid_character">无效字符存在</string>
+
+    <!-- Fragment Tags -->
+
+
+    <!-- EditText Hints -->
+    <string name="et_hint_email">电邮地址</string>
+    <string name="et_hint_first_name">名字</string>
+    <string name="et_hint_last_name">姓氏</string>
+    <string name="et_hint_password">密码</string>
+
+    <!-- Button Text -->
+    <string name="btn_sign_up_text">注册</string>
+    <string name="btn_login_text">登录</string>
+
+    <!-- WelcomeScreen Activity -->
+    <string name="welcome_screen_skip">跳过</string>
+
+    <!-- UserLogin Activity -->
+    <string name="userlogin_sign_up">不是会员？立即注册</string>
+    <string name="userlogin_forget_password">忘记密码</string>
+
+    <!-- PopupForgetPassword -->
+    <string name="popup_forget_password_content">我们将发送电邮给予您以重置密码</string>
+    <string name="success_reset_password_sent">电邮已发送!</string>
+
+    <!-- UserProfileEditFragment -->
+    <string name="user_profile_edit_update_success">Profile updated successfully</string>
+    <string name="user_profile_edit_update_failed">Profile failed to update. Try again.</string>
+    <string name="user_profile_edit_updating">Updating profile</string>
+
+    <!--Add Product Layout-->
+    <string name="product_name">Name</string>
+    <string name="product_barcode">Barcode</string>
+
+    <!--SearchHint-->
+    <string name="search_hint">Search product name or barcode</string>
+
+    <!-- SavedListsFragment -->
+    <string name="saved_list_created_success">The list was created successfully</string>
+
+    <!--UpdatePrice-->
+    <string name="update_price_thanks">Thank you for your contribution!</string>
+    <string name="error_price_empty">Please enter your price.</string>
+
+    <!--Retailers-->
+    <string-array name="retailers_array">
+        <item>Giant</item>
+        <item>Jusco</item>
+        <item>Tesco</item>
+    </string-array>
+
+</resources>

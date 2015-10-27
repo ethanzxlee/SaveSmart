@@ -1,0 +1,65 @@
+<RelativeLayout android:id="@+id/activity_first_time_use_layout"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                tools:context="com.savesmart.WelcomeScreenActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" android:src="@drawable/bg"/>
+
+    <Button
+        android:id="@+id/btn_wlc_skip_now"
+        style="@style/TransparentButtonStyle"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:onClick="btnWlcSkipNowOnClick"
+        android:text="@string/welcome_screen_skip"
+        android:textColor="@color/brightTextColor"/>
+
+    <Button
+        android:id="@+id/btn_wlc_sign_up"
+        style="@style/SaveSmartButtonStyle"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_above="@id/btn_wlc_skip_now"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:onClick="btnWlcSignUpOnClick"
+        android:text="@string/btn_sign_up_text"/>
+
+    <Button
+        android:id="@+id/btn_wlc_login"
+        style="@style/SaveSmartButtonStyle"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_above="@id/btn_wlc_sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/default_gap"
+        android:onClick="btnWlcLoginOnClick"
+        android:text="@string/btn_login_text"/>
+
+    <TextView
+        android:id="@+id/tv_welcome_screen_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_wlc_login"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="60dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:shadowColor="@color/darkTextColor"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="15"
+        android:text="@string/app_name"
+        android:textColor="@color/brightTextColor"
+        android:textSize="55sp"/>
+
+</RelativeLayout>

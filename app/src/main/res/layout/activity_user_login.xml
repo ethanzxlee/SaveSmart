@@ -1,0 +1,127 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savesmart.UserLoginActivity">
+
+    <ScrollView
+        android:id="@+id/sv_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton" android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+            -->
+            <RelativeLayout
+                android:id="@+id/user_login_logo_layout"
+                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/logo_banner_gradient">
+
+                <TextView
+                    android:id="@+id/tv_login_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="48dp"
+                    android:shadowColor="@color/darkTextColor"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="20"
+                    android:text="@string/app_name"
+                    android:textColor="@color/brightTextColor"
+                    android:textSize="38sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_login_logo_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/default_gap">
+
+                <com.savesmart.SaveSmartEditText
+                    android:id="@+id/et_login_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:hint="@string/et_hint_email"
+                    android:inputType="textEmailAddress"/>
+
+                <com.savesmart.SaveSmartEditText
+                    android:id="@+id/et_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/et_login_email"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/et_hint_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"/>
+
+                <Button
+                    android:id="@+id/btn_login_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/et_login_password"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:onClick="btnLoginOnClick"
+                    android:text="@string/btn_login_text"/>
+
+                <Button
+                    android:id="@+id/btn_login_sign_up"
+                    style="@style/TransparentButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_login_login"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:onClick="btnWlcSignUpOnClick"
+                    android:text="@string/userlogin_sign_up"/>
+
+                <Button
+                    android:id="@+id/btn_login_forget_password"
+                    style="@style/TransparentButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_login_sign_up"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:onClick="btnForgetPasswordOnClick"
+                    android:text="@string/userlogin_forget_password"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout android:id="@+id/rl_logging_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@color/transparentDarkPanel"
+                    android:visibility="invisible">
+        <ProgressBar
+            android:id="@+id/pb_login_progress_bar"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_indeterminate"/>
+    </RelativeLayout>
+
+</RelativeLayout>

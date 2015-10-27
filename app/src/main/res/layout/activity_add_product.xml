@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_addProduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="13dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <RelativeLayout
+                android:layout_width="150dp"
+                android:layout_height="128dp"
+                android:id="@+id/product_image_upload"
+                android:layout_centerHorizontal="true"
+                android:clickable="true">
+
+                <!--<ViewSwitcher
+                    android:id="@+id/viewSwitcher"
+                    android:layout_width="fill_parent"
+                    android:layout_height="128dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1" >
+
+                <GridView
+                    android:id="@+id/gridGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="128dp"
+                    android:layout_gravity="top"
+                    android:layout_marginBottom="-10dp"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_marginRight="-10dp"
+                    android:layout_marginTop="-10dp"
+                    android:horizontalSpacing="-15dp"
+                    android:numColumns="3"
+                    android:padding="0dp"
+                    android:verticalSpacing="-15dp"
+                    tools:listitem="@layout/gallery_item" >
+                </GridView>-->
+
+                <ImageView
+                    android:id="@+id/add_product_pic_chooser"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_photo"/>
+                <ImageView
+                    android:id="@+id/add_product_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_add_product_pic"/>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_image_upload"
+                android:paddingTop="16dp"
+                android:id="@+id/relativeLayout">
+                <RelativeLayout
+                    android:id="@+id/info_session"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/name_title"
+                        android:text="PRODUCT INFO"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/title_padding_bottom"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@id/name_title"
+                        android:background="#0f9d58"/>
+                    <EditText
+                        android:id="@+id/productName"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textfield_height"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/name_title"
+                        android:hint="@string/product_name"
+                        android:inputType="textCapWords"
+                        android:imeOptions="actionNext"/>
+                    <EditText
+                        android:id="@+id/productBarcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/textfield_height"
+                        android:layout_below="@id/productName"
+                        android:hint="@string/product_barcode"
+                        android:inputType="number"
+                        android:imeOptions="actionDone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/category_session"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/info_session">
+                    <TextView
+                        android:id="@+id/category_title"
+                        android:text="CATEGORY"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/subcategory_title"
+                        android:paddingTop="@dimen/title_padding_top"
+                        android:paddingBottom="@dimen/title_padding_bottom"/>
+                    <TextView
+                        android:id="@id/subcategory_title"
+                        android:text="SUB-CATEGORY"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="@dimen/title_padding_bottom"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_below="@id/category_title"
+                        android:background="#0f9d58"/>
+                    <Spinner
+                        android:id="@+id/productCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/textfield_height"
+                        android:layout_below="@id/category_title"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/productSubCategory"/>
+                    <Spinner
+                        android:id="@id/productSubCategory"
+                        android:layout_width="160dp"
+                        android:layout_height="@dimen/textfield_height"
+                        android:layout_below="@id/category_title"
+                        android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/button_session"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/category_session"
+                    android:paddingTop="20dp">
+                    <Button
+                        android:id="@+id/btn_addProduct"
+                        android:text="Add Product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout android:id="@+id/rl_adding_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/transparentDarkPanel"
+        android:visibility="invisible">
+        <ProgressBar
+            android:id="@+id/pb_add_progress_bar"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_indeterminate"/>
+
+    </RelativeLayout>
+
+
+
+    <!--
+   <ImageButton
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/imageButton"
+       android:layout_below="@+id/productName"
+       android:layout_centerHorizontal="true"
+       android:src="@drawable/ic_camera" />
+
+     <TextView
+         android:id="@+id/choose_retailer"
+         android:text="Choose retailer"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+
+     <Button
+         android:id="@+id/btn_retailers"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:onClick="showDialog"
+         android:text="@string/product_retailer"/>
+
+     <EditText
+         android:id="@+id/price"
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:hint = "@string/product_price"
+         android:inputType="number"/>
+
+     <Button
+         android:id="@+id/btn_addProduct"
+         android:layout_width="200dp"
+         android:layout_height="wrap_content"
+         android:text="Add Product"
+         android:layout_gravity="center"/>-->
+
+</RelativeLayout>

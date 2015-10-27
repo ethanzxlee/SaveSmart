@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.savesmart.SavedListsFragment">
+
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:id="@+id/saved_list_card_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_saved_list_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text=" You've no saved list.\nPress '+' to create one."
+        android:textSize="18dp"
+        android:visibility="visible"/>
+
+</RelativeLayout>

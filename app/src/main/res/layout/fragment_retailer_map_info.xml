@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_gap"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/retailer_map_retailer_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_gap">
+
+            <TextView
+                android:id="@+id/retailer_map_retailer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="Tesco E-Gate"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/retailer_map_retailer_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/retailer_map_retailer_name"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-condensed"
+                android:text="12345 Bayan Baru, Penang"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/retailer_map_retailer_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/retailer_map_retailer_address"
+                android:layout_centerHorizontal="true"
+                android:text="5 km away"
+                android:textColor="#555"
+                android:textSize="16sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/retailer_map_retailer_card"
+            android:layout_marginTop="@dimen/default_gap"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:id="@+id/retailer_map_pricing_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/retailer_map_product_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RM 10.99"
+                    android:textColor="@color/themeAccentColor1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/retailer_map_product_price_last_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/retailer_map_product_price"
+                    android:fontFamily="sans-serif-light"
+                    android:text="on 28/07/2014"
+                    android:textColor="#555"
+                    android:textSize="12sp"
+                    android:textStyle="italic"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/retailer_map_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/retailer_map_pricing_layout"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingRight="@dimen/default_gap"
+                android:text="ABCD PRODUCTS"
+                android:textSize="20sp"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

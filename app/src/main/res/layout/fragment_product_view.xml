@@ -1,0 +1,264 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.savesmart.ProductViewFragment">
+
+
+    <ScrollView
+        android:id="@+id/product_view_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/product_view_product_photo_section"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/card_bg">
+
+                <ProgressBar
+                    android:id="@+id/product_view_loading_progress_bar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"/>
+
+                <ImageView
+                    android:id="@+id/product_view_product_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/product_view_description_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_view_product_photo_section"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/card_bg"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_product_view_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textColor="@color/themeAccentColor1"
+                    android:textSize="24sp"/>
+                <!--
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_product_view_product_name"
+                                android:id="@+id/product_view_product_lowest_price"
+                                android:layout_alignParentLeft="true"
+                                android:textSize="17sp"
+                                android:textColor="@color/themeColor"
+                                android:textStyle="bold"
+                                android:text="from RM 10.99"/>
+                -->
+                <View
+                    android:id="@+id/product_view_description_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_product_view_product_name"
+                    android:layout_marginBottom="@dimen/default_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:background="#ccc"/>
+
+                <!--
+                                <RelativeLayout
+                                    android:id="@+id/product_view_product_desc_panel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/product_view_description_divider">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif-light"
+                                        android:textStyle="bold"/>
+                                </RelativeLayout>
+                -->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_view_description_divider"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/product_view_favourite"
+                        style="@style/SaveSmartFavouriteToogle"
+                        android:layout_width="36dp"
+                        android:layout_height="34.33dp"
+                        android:layout_margin="@dimen/default_gap"
+                        android:layout_marginBottom="0dp"/>
+
+                    <ImageButton
+                        android:id="@+id/product_view_add_to_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/default_gap"
+                        android:layout_marginBottom="0dp"
+                        android:background="#00000000"
+                        android:src="@drawable/add_to_list"/>
+
+                    <ImageButton
+                        android:id="@+id/product_view_update_price"
+                        android:layout_width="36dp"
+                        android:layout_height="34.33dp"
+                        android:layout_margin="@dimen/default_gap"
+                        android:layout_marginBottom="0dp"
+                        android:background="#00000000"
+                        android:src="@drawable/update_price_icon"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/product_view_price_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_view_description_section"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/card_bg"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/tv_product_view_section_header_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="PRICE UPDATES"
+                    android:textColor="@color/themeAccentColor1"
+                    android:textSize="24sp"/>
+
+                <View
+                    android:id="@+id/product_view_section_header_divider_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_product_view_section_header_price"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:background="#ccc"/>
+
+
+                <LinearLayout
+                    android:id="@+id/product_view_section_price_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_view_section_header_divider_price"
+                    android:layout_marginBottom="@dimen/default_gap"
+                    android:orientation="vertical"/>
+                <!--
+                                <View
+                                    android:id="@+id/product_view_section_footer_divider_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@id/product_view_section_price_list"
+                                    android:layout_marginTop="@dimen/default_gap"
+                                    android:background="#ccc"/>
+
+                                <Button
+                                    android:id="@+id/tv_product_view_section_footer_price"
+                                    style="@style/TransparentButtonStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="48dp"
+                                    android:layout_below="@id/product_view_section_footer_divider_price"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="0dp"
+                                    android:text="MORE"
+                                    android:textColor="@color/themeColor"
+                                    android:textStyle="bold"/>
+                -->
+            </RelativeLayout>
+            <!--
+                        <RelativeLayout
+                            android:id="@+id/product_view_review_section"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/product_view_price_section"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:background="@drawable/card_bg"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:paddingTop="16dp">
+
+                            <TextView
+                                android:id="@+id/tv_product_view_section_header_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-condensed"
+                                android:text="REVIEWS"
+                                android:textColor="@color/themeAccentColor1"
+                                android:textSize="24sp"/>
+
+                            <View
+                                android:id="@+id/product_view_section_header_divider_review"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/tv_product_view_section_header_review"
+                                android:layout_marginBottom="@dimen/default_gap"
+                                android:layout_marginTop="@dimen/default_gap"
+                                android:background="#ccc"/>
+
+                            <RelativeLayout
+                                android:id="@+id/product_view_section_content_review"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/product_view_section_header_divider_review">
+                            </RelativeLayout>
+
+                            <View
+                                android:id="@+id/product_view_section_footer_divider_review"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/product_view_section_content_review"
+                                android:layout_marginTop="@dimen/default_gap"
+                                android:background="#ccc"/>
+
+
+                            <Button
+                                android:id="@+id/tv_product_view_section_footer_review"
+                                style="@style/TransparentButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="48dp"
+                                android:layout_below="@id/product_view_section_footer_divider_review"
+                                android:layout_centerHorizontal="true"
+                                android:layout_margin="0dp"
+                                android:text="MORE"
+                                android:textColor="@color/themeColor"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout> -->
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/product_view_select_list_section"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+    </FrameLayout>
+
+</FrameLayout>
+

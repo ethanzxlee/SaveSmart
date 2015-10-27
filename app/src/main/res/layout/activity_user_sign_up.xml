@@ -1,0 +1,110 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savesmart.UserSignUpActivity">
+
+    <ScrollView
+        android:id="@+id/sv_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/user_sign_up_logo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/logo_banner_gradient">
+
+                <TextView
+                    android:id="@+id/tv_sign_up_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:padding="48dp"
+                    android:shadowColor="@color/darkTextColor"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="20"
+                    android:text="@string/app_name"
+                    android:textColor="@color/brightTextColor"
+                    android:textSize="38sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/main_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_sign_up_logo_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/default_gap">
+
+                <com.savesmart.SaveSmartEditText
+                    android:id="@+id/et_sign_up_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/et_hint_first_name"
+                    android:inputType="textNoSuggestions|textCapWords"/>
+
+                <com.savesmart.SaveSmartEditText
+                    android:id="@+id/et_sign_up_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/et_sign_up_first_name"
+                    android:hint="@string/et_hint_last_name"
+                    android:inputType="textNoSuggestions|textCapWords"/>
+
+                <com.savesmart.SaveSmartEditText
+                    android:id="@+id/et_sign_up_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/et_sign_up_last_name"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/et_hint_password"
+                    android:inputType="textNoSuggestions|textPassword"/>
+
+                <com.savesmart.SaveSmartEditText
+                    android:id="@+id/et_sign_up_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/et_sign_up_password"
+                    android:hint="@string/et_hint_email"
+                    android:inputType="textNoSuggestions|textEmailAddress"/>
+
+                <Button
+                    android:id="@+id/btn_sign_up_sign_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_below="@id/et_sign_up_email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:onClick="btnSignUpOnClick"
+                    android:text="@string/btn_sign_up_text"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout android:id="@+id/rl_signing_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0"
+                    android:background="@color/transparentDarkPanel"
+                    android:visibility="invisible">
+        <ProgressBar
+            android:id="@+id/pb_sign_up_progress_bar"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_indeterminate"/>
+    </RelativeLayout>
+
+</RelativeLayout>

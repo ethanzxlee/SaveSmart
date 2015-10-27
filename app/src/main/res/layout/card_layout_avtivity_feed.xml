@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/default_gap">
+
+    <RelativeLayout
+        android:id="@+id/activity_feed_card_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.savesmart.CircularImageView
+            android:id="@+id/activity_feed_author_pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/default_profile_pic"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/activity_feed_author_pic"
+            android:paddingLeft="@dimen/default_gap">
+
+            <TextView
+                android:id="@+id/activity_feed_author_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/activity_feed_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_feed_author_name"
+                android:fontFamily="sans-serif-light"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_feed_card_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_feed_card_header"
+        android:paddingTop="@dimen/default_gap">
+
+        <TextView
+            android:id="@+id/activity_feed_action_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/themeAccentColor1"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/activity_feed_action_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_feed_action_title"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

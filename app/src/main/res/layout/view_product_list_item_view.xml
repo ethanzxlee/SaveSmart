@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/product_list_item_fake_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/product_list_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"/>
+
+    <ToggleButton
+        android:id="@+id/product_list_item_favourite"
+        style="@style/SaveSmartFavouriteToogle"
+        android:layout_width="30dp"
+        android:layout_height="28.60833dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="8dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/product_list_item_image"
+        android:background="#dddddd"/>
+
+    <RelativeLayout
+        android:id="@+id/product_list_item_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_list_item_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/product_list_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:enabled="false" android:maxLines="2" android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/product_list_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/product_list_item_name"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/themeColor"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

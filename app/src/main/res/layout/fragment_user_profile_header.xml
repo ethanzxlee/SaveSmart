@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginBottom="@dimen/default_gap"
+             android:background="@drawable/user_profile_header_gradient"
+             android:orientation="vertical"
+             android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/user_profile_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeColor"
+        android:padding="@dimen/default_gap">
+
+        <RelativeLayout
+            android:id="@+id/user_profile_circular_profile_pic_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <com.savesmart.CircularImageView
+                android:id="@+id/user_profile_circular_profile_pic"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/default_profile_pic"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_profile_circular_profile_pic_layout"
+            android:layout_marginBottom="@dimen/default_gap">
+
+            <TextView
+                android:id="@+id/tv_user_profile_first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/brightTextColor"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_user_profile_level_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_profile_first_name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/brightTextColor" android:textSize="17sp"
+
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/user_profile_progress_bar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_user_profile_level_category"
+                android:layout_marginLeft="@dimen/default_gap"
+                android:layout_marginRight="@dimen/default_gap"
+                android:layout_marginTop="4dp">
+
+                <ProgressBar
+                    android:id="@+id/level_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp"
+                    android:progressDrawable="@drawable/level_progress_bar"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

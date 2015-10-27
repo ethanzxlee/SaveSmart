@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.savesmart.RetailerMapFragment">
+
+    <fragment
+        android:id="@+id/retailer_map_map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        map:useViewLifecycle="true"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/retailer_map_info_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/retailer_map_map"
+        android:padding="@dimen/default_gap"/>
+
+    <ImageView
+        android:id="@+id/retailer_map_view_pager_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/retailer_map_info_view_pager"
+        android:scaleType="fitXY"
+        android:src="@drawable/shadow_horizontal_upper"/>
+
+</RelativeLayout>

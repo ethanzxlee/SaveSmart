@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.savesmart.ProductListingFragment">
+
+    <it.gmariotti.cardslib.library.extra.staggeredgrid.view.CardGridStaggeredView
+        android:id="@+id/staggered_card_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="10dp"
+        card:column_count_landscape="3"
+        card:column_count_portrait="2"/>
+
+    <RelativeLayout android:id="@+id/rl_searching_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="@color/transparentDarkPanel"
+        android:visibility="invisible">
+        <ProgressBar
+            android:id="@+id/pb_add_progress_bar"
+            android:layout_width="76dp"
+            android:layout_height="76dp"
+            android:layout_centerInParent="true"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/progress_bar_indeterminate"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/product_listing_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Loading..."
+        android:textColor="@color/themeColor"
+        android:textSize="22dp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>

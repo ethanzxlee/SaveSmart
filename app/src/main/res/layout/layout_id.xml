@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+
+
+    <ImageView
+        android:id="@+id/retailerImgid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/retailer_giant"
+
+        />
+
+    <TextView
+        android:text="Tisco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:layout_marginTop="12dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/retailerImgid"
+        android:id="@+id/retailerTitleid"
+        android:paddingTop="30dp"
+        />
+
+    <TextView
+        android:text="sec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/retailerTitleid"
+        android:paddingLeft="50dp"
+        android:paddingTop="40dp"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        android:id="@+id/retailerSecTitleid"/>
+
+</RelativeLayout>

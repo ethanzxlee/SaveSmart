@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="false" tools:context="com.savesmart.SavedListSelectorFragment">
+
+    <View
+        android:id="@+id/list_selector_background_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:background="#80000000"/>
+
+    <RelativeLayout
+        android:id="@+id/list_selector_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:padding="@dimen/default_gap"
+        android:translationY="325dp">
+
+        <TextView
+            android:id="@+id/list_selector_header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans_serif_condensed"
+            android:text="SAVE TO A LIST"
+            android:textColor="@color/themeAccentColor1"
+            android:textSize="25sp"/>
+
+        <View
+            android:id="@+id/list_selector_header_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/list_selector_header_text"
+            android:layout_marginTop="@dimen/default_gap"
+            android:background="#ccc"/>
+
+
+        <ListView
+            android:id="@+id/list_selector_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/list_selector_header_divider"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

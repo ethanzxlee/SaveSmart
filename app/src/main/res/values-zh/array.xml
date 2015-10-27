@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="nav_drawer_item_icon">
+        <item>@drawable/ic_nav_drawer_home</item>
+        <item>@drawable/ic_nav_drawer_browse</item>
+        <item>@drawable/ic_nav_drawer_saved_list</item>
+        <item>@drawable/ic_nav_drawer_favourites</item>
+        <item>@drawable/ic_nav_drawer_history</item>
+        <item>@drawable/ic_nav_drawer_setting</item>
+        <item>@drawable/ic_nav_drawer_logout</item>
+    </array>
+
+    <string-array name="nav_drawer_item_title">
+        <item>主页</item>
+        <item>浏览</item>
+        <item>清单</item>
+        <item>喜爱</item>
+        <item>历史</item>
+        <item>设置</item>
+        <item>注销</item>
+    </string-array>
+
+</resources>

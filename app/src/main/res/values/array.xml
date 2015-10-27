@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="nav_drawer_item_icon">
+        <item>@drawable/ic_nav_drawer_home</item>
+        <item>@drawable/ic_nav_drawer_browse</item>
+        <item>@drawable/ic_nav_drawer_saved_list</item>
+        <item>@drawable/ic_nav_drawer_favourites</item>
+        <item>@drawable/ic_nav_drawer_history</item>
+        <item>@drawable/ic_nav_drawer_setting</item>
+        <item>@drawable/ic_nav_drawer_logout</item>
+    </array>
+
+    <string-array name="nav_drawer_item_title">
+        <item>Home</item>
+        <item>Browse</item>
+        <item>Saved Lists</item>
+        <item>Favourites</item>
+        <item>History</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </string-array>
+
+</resources>

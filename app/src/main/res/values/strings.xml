@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- GLOBAL -->
+    <string name="app_name">saveSmart</string>
+    <string name="action_settings">Settings</string>
+    <string name="custom_font_path_1">fonts/archer_semibold_pro.otf</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+
+    <!-- Activity Title -->
+    <string name="title_activity_main">saveSmart</string>
+    <string name="title_activity_first_time_use">Welcome</string>
+    <string name="title_activity_user_sign_up">Sign Up</string>
+    <string name="title_activity_user_login">Login</string>
+
+    <!-- Popup Title -->
+    <string name="title_popup_forget_password">Forget password?</string>
+
+    <!-- Navigation Drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Error messages -->
+    <string name="error_email_not_found">This email hasn\'t been registered on saveSmart</string>
+    <string name="error_email_invalid">Invalid email address</string>
+    <string name="error_email_empty">Please enter your email address</string>
+    <string name="error_email_taken">This email was already registered on saveSmart</string>
+    <string name="error_field_empty">Please fill in the empty fields</string>
+    <string name="error_invalid_character">Invalid character entered</string>
+
+    <!-- Fragment Tags -->
+
+
+    <!-- EditText Hints -->
+    <string name="et_hint_email">Email address</string>
+    <string name="et_hint_first_name">First name</string>
+    <string name="et_hint_last_name">Last Name</string>
+    <string name="et_hint_password">Password</string>
+
+    <!-- Button Text -->
+    <string name="btn_sign_up_text">Sign Up</string>
+    <string name="btn_login_text">Login</string>
+
+    <!-- WelcomeScreen Activity -->
+    <string name="welcome_screen_skip">Skip now</string>
+
+    <!-- UserLogin Activity -->
+    <string name="userlogin_sign_up">Not a member? Sign up now</string>
+    <string name="userlogin_forget_password">Forget password?</string>
+
+    <!-- PopupForgetPassword -->
+    <string name="popup_forget_password_content">We\'ll email you to reset your password.</string>
+    <string name="success_reset_password_sent">Email sent!</string>
+
+    <!-- UserProfileEditFragment -->
+    <string name="user_profile_edit_update_success">Profile updated successfully</string>
+    <string name="user_profile_edit_update_failed">Profile failed to update. Try again.</string>
+    <string name="user_profile_edit_updating">Updating profile</string>
+
+    <!-- Add Product Layout -->
+    <string name="product_name">Name</string>
+    <string name="product_barcode">Barcode</string>
+
+    <!-- SearchHint -->
+    <string name="search_hint">Search product name or barcode</string>
+
+    <!-- SavedListsFragment -->
+    <string name="saved_list_created_success">The list was created successfully</string>
+
+    <!-- UpdatePrice -->
+    <string name="update_price_thanks">Thank you for your contribution!</string>
+    <string name="error_price_empty">Please enter your price.</string>
+
+    <!-- Retailers -->
+    <string-array name="retailers_array">
+
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

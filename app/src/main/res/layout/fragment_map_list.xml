@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <it.gmariotti.cardslib.library.view.CardListView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_margin="10dp"
+        android:id="@+id/myList"
+        style="@style/list_card.base"
+        android:layout_below="@+id/myProductView"
+        />
+
+    <it.gmariotti.cardslib.library.view.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myProductView"
+        android:layout_margin="10dp"
+        style="@style/list_card.base"
+        />
+
+</RelativeLayout>

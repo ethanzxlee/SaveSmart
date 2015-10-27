@@ -1,0 +1,74 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+
+
+    <!-- General -->
+    <style name="SaveSmartButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:textColor">@color/brightTextColor</item>
+        <item name="android:background">@drawable/apptheme_btn_default_holo_light</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+    <style name="TransparentButtonStyle">
+        <item name="android:maxHeight">48dp</item>
+        <item name="android:textColor">@color/darkTextColor</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SaveSmartEditTextStyle" parent="android:style/Widget.EditText">
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+
+    <!-- Action Bar-->
+    <style name="CustomActionBarTheme" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@drawable/action_bar_background</item>
+        <item name="background">@drawable/action_bar_background</item>
+        <item name="android:titleTextStyle" tools:ignore="NewApi">
+            @style/CustomActionBarTheme.TitleTextStyle
+        </item>
+        <item name="titleTextStyle">@style/CustomActionBarTheme.TitleTextStyle</item>
+        <!--<item name="android:icon">@drawable/ic_action_bar_icon</item>
+        <item name="icon">@drawable/ic_action_bar_icon</item>-->
+    </style>
+
+    <style name="CustomActionBarTheme.TitleTextStyle"
+           parent="android:TextAppearance.DeviceDefault.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Widget.Custom.PtrHeader" parent="android:Widget">
+        <item name="ptrProgressBarColor">@color/themeAccentColor0</item>
+    </style>
+
+    <style name="SaveSmartItemTextAppearance">
+        <item name="android:textColor">@color/themeColor</item>
+    </style>
+
+    <!-- NAVIGATION DRAWER -->
+    <style name="NavigationDrawerTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/darkTextColor</item>
+    </style>
+
+    <!-- TOGGLE BUTTON -->
+    <style name="SaveSmartFavouriteToogle" parent="android:Widget">
+        <item name="android:background">@drawable/btn_toggle_bg</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+
+    <!-- OVERFLOW ICON -->
+    <style name="SaveSmartActionOverflowIconStyle"
+           parent="@android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_overflow</item>
+    </style>
+
+
+</resources>

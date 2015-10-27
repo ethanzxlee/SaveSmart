@@ -1,0 +1,97 @@
+<RelativeLayout android:id="@+id/fragment_nav_drawer"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/backgroundColor"
+                android:orientation="vertical"
+                tools:context="com.savesmart.NavigationDrawerFragment">
+
+    <RelativeLayout
+        android:id="@+id/nav_drawer_profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="StartUserProfileActivityOnClick"
+        android:padding="15dp">
+
+        <com.savesmart.CircularImageView
+            android:id="@+id/ib_nav_drawer_profile_pic"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@android:color/transparent"
+            android:cropToPadding="true"
+            android:onClick="StartUserProfileActivityOnClick"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_profile_pic"/>
+
+        <Button
+            android:id="@+id/btn_nav_drawer_username"
+            style="@style/TransparentButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/default_gap"
+            android:layout_toRightOf="@id/ib_nav_drawer_profile_pic"
+            android:onClick="StartUserProfileActivityOnClick"
+            android:textStyle="bold"/>
+
+
+        <LinearLayout
+            android:id="@+id/nav_drawer_login_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_nav_drawer_username"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_nav_drawer_login"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/ib_nav_drawer_profile_pic"
+                android:onClick="btnNavDrawerLoginOnClick"
+                android:text="@string/btn_login_text"/>
+            <!--
+                    <View
+                        android:layout_width="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@android:color/transparent"/>
+
+                    <Button
+                        android:id="@+id/btn_nav_drawer_sign_up"
+                        android:layout_width="0px"
+                        android:layout_height="40dp"
+                        android:layout_weight="0.5"
+                        android:layout_toRightOf="@id/btn_nav_drawer_login"
+                        android:layout_below="@id/ib_nav_drawer_profile_pic"
+                        android:text="Sign up"
+                        android:onClick="btnNavDrawerSignUpOnClick"
+                        style="@style/NavigationDrawerButtonStyle"/>-->
+        </LinearLayout>
+        <!--
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/nav_drawer_login_sign_up"
+                    android:background="#B0BABC"/>
+        -->
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/nav_drawer_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nav_drawer_profile_layout"
+        android:layout_alignParentTop="true"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0px">
+    </ListView>
+
+
+</RelativeLayout>

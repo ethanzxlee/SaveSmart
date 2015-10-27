@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="themeColor">#ff0f9d58</color>
+    <!--0398FF, 13b991-->
+    <color name="themeAccentColor0">#ff29C4D0</color>
+    <color name="themeAccentColor1">#ff2d6769</color>
+    <color name="brightTextColor">#EFEFFF</color>
+    <color name="darkTextColor">#ff192940</color>
+    <!--ff192940-->
+    <color name="backgroundColor">#fff0f0f0</color>
+    <color name="transparentDarkPanel">#da2e2e2e</color>
+
+</resources>
